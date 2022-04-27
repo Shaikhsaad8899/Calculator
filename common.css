@@ -1,0 +1,100 @@
+/* calcy */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+button {
+  border-radius: 15px;
+  margin: 1px;
+  font-size: 2rem;
+  border: 2px solid rgb(96, 42, 42);
+  cursor: pointer;
+}
+button:hover{
+  color: gray;
+  /* background-color: aquamarine; */
+  border-color: rgb(23, 73, 23);
+  border: 3px solid ;
+  transition: .2s;
+}
+.modifiers button {
+  background-color: rgb(111, 80, 80);
+}
+.operations button {
+  background-color: orange;
+  width: 100px;
+}
+.digits button {
+  background-color: #efefef;
+}
+
+/* All things Grid, Flexbox, Box Alignment */
+.wrapper,
+.subgrid {
+  display: grid;
+}
+.wrapper {
+  grid-template-areas:
+    "total total total total"
+    "modif modif modif oper"
+    "digit digit digit oper"
+    "digit digit digit oper"
+    "digit digit digit oper"
+    "digit digit digit oper";
+  grid-auto-columns: 1fr;
+}
+.show-input {
+  grid-area: total;
+}
+.modifiers {
+  grid-area: modif;
+}
+.operations {
+  grid-area: oper;
+}
+.digits {
+  grid-area: digit;
+}
+
+.show-input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.modifiers {
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+.digits button {
+  flex: 3 0 30%;
+}
+.inputbox{
+  border: 3px solid rgb(122, 122, 58);
+  border-radius: 15px;
+  background-color: #333;
+width: 440px;
+color: #efefef;
+padding: 5px;
+height: 100px;
+font-size: 5rem;
+}
+.wrapper {
+  max-width: 450px;
+  min-height: 96vh;
+  margin: 0 auto;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(122, 140, 134);
+}
